@@ -21,10 +21,10 @@ class ExampleResourceTest {
     @Test
     void testWorldEndpoint() {
         given()
-                .when().get("/world")
+                .when().get("/hello/world")
                 .then()
                 .statusCode(200)
-                .body(is("World from RESTEasy Reactive"));
+                .body(is("Hello World from RESTEasy Reactive"));
     }
 
 }

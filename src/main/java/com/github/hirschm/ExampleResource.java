@@ -15,8 +15,9 @@ public class ExampleResource {
     }
 
     @GET
+    @Path("/world")
     @Produces(MediaType.TEXT_PLAIN)
     public String world() {
-        return "World from RESTEasy Reactive";
+        return "Hello World from RESTEasy Reactive";
     }
 }
