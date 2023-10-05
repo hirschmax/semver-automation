@@ -24,7 +24,7 @@ class ExampleResourceTest {
                 .when().get("/hello/world")
                 .then()
                 .statusCode(200)
-                .body(is("Hello World from RESTEasy Reactive"));
+                .body(is("Hello World"));
     }
 
 }
