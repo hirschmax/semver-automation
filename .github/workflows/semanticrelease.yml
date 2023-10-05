@@ -36,5 +36,7 @@ jobs:
     - name: Install plugins
       run: npm install @semantic-release/git @semantic-release/github @semantic-release/exec
     - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npx semantic-release
 
