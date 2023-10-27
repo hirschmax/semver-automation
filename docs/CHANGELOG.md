@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/hirschmax/semver-automation/compare/v2.2.0...v2.2.1) (2023-10-27)
+
+
+### Bug Fixes
+
+* **EVOKONZSTG-92:** update howto ([fc4c8ba](https://github.com/hirschmax/semver-automation/commit/fc4c8ba4cff501d1e0cff2df59cd8cf484f76d81))
+
 # [2.2.0](https://github.com/hirschmax/semver-automation/compare/v2.1.1...v2.2.0) (2023-10-27)
 
 
