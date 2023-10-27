@@ -15,6 +15,8 @@ In order to be able to follow this tutorial, you need to have `node` installed o
     plugins:
       - "@semantic-release/commit-analyzer"
       - "@semantic-release/release-notes-generator"
+      - - "@semantic-release/changelog"
+        - changelogFile: CHANGELOG.md
       - - "@semantic-release/exec"
         - verifyReleaseCmd: 'mvn versions:set -DnewVersion="${nextRelease.version}" && echo "NEXT_VERSION=${nextRelease.version}" >> build.env'
       - -  "@semantic-release/git"
@@ -26,7 +28,7 @@ In order to be able to follow this tutorial, you need to have `node` installed o
       - "main"
     ```
    A release step will run the following steps in this order, which can be implemented by one or more plugins:
-   `verifyConditions`, `analyzeConditions` (required), `verifyRelease`, `generateNotes`, `prepare`, `publish`, `addChannel`,
+   `verifyConditions`, `analyzeCommits` (required), `verifyRelease`, `generateNotes`, `prepare`, `publish`, `addChannel`,
    `success`, `fail`.
    If none of the plugins implements the `analyzeCommits` step, as a default the plugin `@semantic-release/commit-analyzer` is used.
    In the `.releaserc` file, we added the (official) [plugins](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/plugins.md) `commit-analyzer`, `release-notes-generator`, `exec` and `git`.
@@ -53,7 +55,7 @@ In order to be able to follow this tutorial, you need to have `node` installed o
 3. Commit all changes and push them to the main branch (you could also set everything up for different and multiple 
    branches, you just need to update the `.releaserc` accordingly)
 4. Install the used plugins locally\
-   `npm install @semantic-release/git @semantic-release/exec`
+   `npm install @semantic-release/changelog @semantic-release/git @semantic-release/exec`
 5. Run semantic-release\
    `npx semantic-release`
 
