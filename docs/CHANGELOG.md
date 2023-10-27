@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/hirschmax/semver-automation/compare/v2.2.1...v2.2.2) (2023-10-27)
+
+
+### Bug Fixes
+
+* **EVOKONZSTG-92:** add --no-cli flag ([bf32de7](https://github.com/hirschmax/semver-automation/commit/bf32de7dfc92aef8a9e6e6445c1e2f909e8e91be))
+
 ## [2.2.1](https://github.com/hirschmax/semver-automation/compare/v2.2.0...v2.2.1) (2023-10-27)
 
 
