@@ -11,21 +11,24 @@ In order to be able to follow this tutorial, you need to have `node` installed o
 
 1. Create new Git repository with a new Maven project
 2. Create a new file with the name `.releaserc` in the root of the Maven project
-    ```yaml
-    plugins:
-      - "@semantic-release/commit-analyzer"
-      - "@semantic-release/release-notes-generator"
-      - - "@semantic-release/changelog"
-        - changelogFile: CHANGELOG.md
-      - - "@semantic-release/exec"
-        - verifyReleaseCmd: 'mvn versions:set -DnewVersion="${nextRelease.version}" && echo "NEXT_VERSION=${nextRelease.version}" >> build.env'
-      - -  "@semantic-release/git"
-        - assets:
-            - pom.xml
-          message: "chore(release): bump ${nextRelease.version}"
-    
-    branches:
-      - "main"
+   ```yaml
+   plugins:
+     - "@semantic-release/commit-analyzer"
+     - "@semantic-release/release-notes-generator"
+     - - "@semantic-release/changelog"
+       - changelogFile: docs/CHANGELOG.md
+     - - "@semantic-release/git"
+       - assets:
+         - docs/CHANGELOG.md
+     - - "@semantic-release/exec"
+       - verifyReleaseCmd: 'mvn versions:set -DnewVersion="${nextRelease.version}" && echo "NEXT_VERSION=${nextRelease.version}" >> build.env'
+     - -  "@semantic-release/git"
+       - assets:
+           - pom.xml
+         message: "chore(release): bump ${nextRelease.version}"
+   
+   branches:
+     - "main"
     ```
    A release step will run the following steps in this order, which can be implemented by one or more plugins:
    `verifyConditions`, `analyzeCommits` (required), `verifyRelease`, `generateNotes`, `prepare`, `publish`, `addChannel`,
