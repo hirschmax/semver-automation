@@ -60,7 +60,7 @@ In order to be able to follow this tutorial, you need to have `node` installed o
 4. Install the used plugins locally\
    `npm install @semantic-release/changelog @semantic-release/git @semantic-release/exec`
 5. Run semantic-release\
-   `npx semantic-release`
+   `npx semantic-release --no-cli`
 
 After the first semantic-release run, the Maven project's version should have been set to `1.0.0` (if it was not already).
 To test the automatic versioning, you can add some commits to the `main` branch following the 
