@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/hirschmax/semver-automation/compare/v2.2.2...v2.3.0) (2023-11-10)
+
+
+### Features
+
+* add example for panache repository ([8947e6e](https://github.com/hirschmax/semver-automation/commit/8947e6e57c359720f1f2943edda7fb08e32ea83a))
+
 ## [2.2.2](https://github.com/hirschmax/semver-automation/compare/v2.2.1...v2.2.2) (2023-10-27)
 
 
