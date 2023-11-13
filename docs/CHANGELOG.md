@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/hirschmax/semver-automation/compare/v2.3.0...v2.4.0) (2023-11-13)
+
+
+### Features
+
+* add example for jakarta ee repo ([e7f1610](https://github.com/hirschmax/semver-automation/commit/e7f16103fedf104cc8ddc5952f1ead1a8838d01a))
+
 # [2.3.0](https://github.com/hirschmax/semver-automation/compare/v2.2.2...v2.3.0) (2023-11-10)
 
 
